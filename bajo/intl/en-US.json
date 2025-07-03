@@ -1,0 +1,7 @@
+{
+  "orSigninThrough": "or signin through",
+  "orSignupThrough": "or signup through",
+  "noEmailFound": "Can't get email address from provider, sorry!",
+  "emailAlreadyInUse%s": "Sorry, your email: %s is already in use",
+  "cantGetFirstLastName": "Can't get the first name or last name appropriately"
+}

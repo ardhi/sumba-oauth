@@ -1,0 +1,7 @@
+{
+  "orSigninThrough": "atau masuk melalui",
+  "orSignupThrough": "atau daftar melalui",
+  "noEmailFound": "Maaf, tidak mendapatkan alamat surel dari provider",
+  "emailAlreadyInUse%s": "Maaf, surel Anda: %s telah dipergunakan",
+  "cantGetFirstLastName": "Tidak bisa mendapatkan nama depan atau nama belakang dengan sewajarnya"
+}
