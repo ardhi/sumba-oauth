@@ -3,7 +3,7 @@ import Grant from 'grant/lib/grant.js'
 import qs from 'qs'
 
 async function afterSessionSetup (ctx) {
-  const { merge, omit } = this.lib._
+  const { merge, omit } = this.app.lib._
   const { getOrigin } = this.app.waibu
   let config = merge({}, this.config.provider, defProviders)
   config.defaults.prefix = `/${this.config.waibu.prefix}`

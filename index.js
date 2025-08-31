@@ -1,7 +1,7 @@
 async function factory (pkgName) {
   const me = this
 
-  class SumbaOauth extends this.lib.Plugin {
+  class SumbaOauth extends this.app.pluginClass.base {
     static alias = 'oauth'
     static dependencies = ['sumba', 'waibu-mpa']
 

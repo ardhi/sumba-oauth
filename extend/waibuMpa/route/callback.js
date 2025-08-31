@@ -1,7 +1,7 @@
 const model = 'SumbaUser'
 
 const responseHandler = async function (response, provider) {
-  const { get, isEmpty } = this.lib._
+  const { get, isEmpty } = this.app.lib._
   const email = get(response, 'profile.email')
   const body = {
     email,
@@ -20,7 +20,7 @@ const responseHandler = async function (response, provider) {
 
 const callback = {
   handler: async function (req, reply) {
-    const { isEmpty } = this.lib._
+    const { isEmpty } = this.app.lib._
     const { recordFindOne, recordCreate } = this.app.waibuDb
     const { signin, generatePassword } = this.app.sumba
     const { generateId } = this.app.bajo
