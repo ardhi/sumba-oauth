@@ -4,7 +4,8 @@
   "description": "OAuth providers for Sumba",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-doc": "jsdoc -c .jsdoc.conf.json",
+    "test": "mocha"
   },
   "type": "module",
   "bajo": {
@@ -26,5 +27,9 @@
   "license": "MIT",
   "dependencies": {
     "grant": "^5.4.24"
+  },
+  "devDependencies": {
+    "clean-jsdoc-theme": "^4.3.0",
+    "jsdoc-plugin-intersection": "^1.0.4"
   }
 }
