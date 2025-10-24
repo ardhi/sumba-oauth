@@ -1,7 +1,7 @@
 ![Sumba](static/logo.png)
 
 ### Sumba Biz Suite
-- [Contributing](CONTRIBUTING.md)
+- [Contributing](wiki/CONTRIBUTING.md)
 
 ## Hire Me
 
