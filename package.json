@@ -1,6 +1,6 @@
 {
   "name": "sumba-oauth",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "OAuth providers for Sumba",
   "main": "index.js",
   "scripts": {
