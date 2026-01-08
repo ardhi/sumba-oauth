@@ -21,7 +21,7 @@ const responseHandler = async function (response, provider) {
 const callback = {
   handler: async function (req, reply) {
     const { isEmpty } = this.app.lib._
-    const { recordFindOne, recordCreate } = this.app.waibuDb
+    const { findOneRecord, createRecord } = this.app.waibuDb
     const { signin, generatePassword } = this.app.sumba
     const { generateId } = this.app.lib.aneka
     const { hash } = this.app.bajoExtra
@@ -32,7 +32,7 @@ const callback = {
     req.session.grant = null
     const providerName = `oauth-${provider}`
     const options = { dataOnly: true, query: { email: body.email } }
-    const user = await recordFindOne({ model, req, reply, options })
+    const user = await findOneRecord({ model, req, reply, options })
     if (user) {
       if (user.provider === providerName) return await signin({ user, req, reply }) // TODO: user is disabled
       throw this.error('emailAlreadyInUse') // TODO: bind oauth with existing login?
@@ -43,7 +43,7 @@ const callback = {
       body.status = 'ACTIVE'
       body.token = generateId()
       body.provider = providerName
-      const { data } = await recordCreate({ model, req, reply, body, options: { noFlash: true, forceNoHidden: true } })
+      const { data } = await createRecord({ model, req, reply, body, options: { noFlash: true, forceNoHidden: true } })
       return await signin({ user: data, req, reply })
     }
   }
