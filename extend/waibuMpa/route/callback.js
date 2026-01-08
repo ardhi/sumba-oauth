@@ -23,7 +23,7 @@ const callback = {
     const { isEmpty } = this.app.lib._
     const { recordFindOne, recordCreate } = this.app.waibuDb
     const { signin, generatePassword } = this.app.sumba
-    const { generateId } = this.app.bajo
+    const { generateId } = this.app.lib.aneka
     const { hash } = this.app.bajoExtra
     const { response, provider } = req.session.grant
     if (response.error) throw this.error(response.error)
