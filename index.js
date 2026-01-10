@@ -13,9 +13,6 @@ async function factory (pkgName) {
    * @class
    */
   class SumbaOauth extends this.app.baseClass.Base {
-    static alias = 'oauth'
-    static dependencies = ['sumba', 'waibu-mpa']
-
     constructor () {
       super(pkgName, me.app)
       this.config = {

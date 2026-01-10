@@ -9,7 +9,9 @@
   },
   "type": "module",
   "bajo": {
-    "type": "plugin"
+    "type": "plugin",
+    "alias": "oauth",
+    "dependencies": ["sumba", "waibu-mpa"]
   },
   "repository": {
     "type": "git",
